@@ -4,10 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
+    <link rel="stylesheet" href="./styles/headerStyles.css" />
   </head>
   <body>
+    <header class="header">
+      <img src="./assetsv2/pokeball.svg" alt="pokeball" />
+      <h1>Pokédex</h1>
+    </header>
+    <nav class="navbar">
+      <div class="searchBarWrapper">
+        <img src="./assetsv2/searchIcon.svg" alt="magnifier (search) icon" />
+        <input
+          type="search"
+          placeholder="Search"
+          name="searchBar"
+          id="searchBar"
+        />
+      </div>
+      <div class="sortDropDownMenuWrapper">
+        <img src="./assetsv2/sortIcon.svg" alt="sort icon" />
+      </div>
+    </nav>
     <main class="main">
-      <h1>test</h1>
+      <div class="pokemonWrapper"></div>
     </main>
   </body>
 </html>
