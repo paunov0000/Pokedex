@@ -26,7 +26,7 @@ fetch(baseUrl)
 
       pPokemonName.textContent = capitalizeFirstLetter(currPokemon.name);
       const pokemonId = pokemonIdExtractor(currPokemon.url);
-      pPokemonId.textContent = `#${pokemonId}`;
+      pPokemonId.textContent = `#${padWithLeadingZeros(pokemonId, 3)}`; //! Add leading 0s
 
       imgPokemon.src = `${imgUrl}${pokemonId}.svg`;
       imgPokemonContainer.appendChild(imgPokemon);
@@ -47,4 +47,8 @@ function pokemonIdExtractor(pokemonUrl) {
 
 function capitalizeFirstLetter(string) {
   return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
+function padWithLeadingZeros(num, totalLength) {
+  return String(num).padStart(totalLength, "0");
 }

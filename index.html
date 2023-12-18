@@ -12,12 +12,24 @@
   </head>
   <body>
     <header class="header">
-      <img src="./assetsv2/pokeball.svg" alt="pokeball" />
-      <h1>Pokédex</h1>
+      <img
+        id="pokeball"
+        class="filter-white"
+        src="./assetsv2/pokeball.svg"
+        alt="pokeball"
+      />
+      <h1 id="title">Pokédex</h1>
     </header>
     <nav class="navbar">
       <div class="searchBarWrapper">
-        <img src="./assetsv2/searchIcon.svg" alt="magnifier (search) icon" />
+        <label for="searchBar">
+          <img
+            class="filter-red"
+            id="searchIcon"
+            src="./assetsv2/searchIcon.svg"
+            alt="search icon"
+          />
+        </label>
         <input
           type="search"
           placeholder="Search"
@@ -26,7 +38,12 @@
         />
       </div>
       <div class="sortDropDownMenuWrapper">
-        <img src="./assetsv2/sortIcon.svg" alt="sort icon" />
+        <img
+          id="sortIcon"
+          class="filter-red"
+          src="./assetsv2/sortIcon.svg"
+          alt="sort icon"
+        />
       </div>
     </nav>
     <main class="main">
