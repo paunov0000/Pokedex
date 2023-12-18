@@ -4,7 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Pokédex</title>
+    <link rel="stylesheet" href="styles/reset.css" />
     <link rel="stylesheet" href="./styles/headerStyles.css" />
+    <link rel="stylesheet" href="/styles/pokemon-card.css" />
   </head>
   <body>
     <header class="header">
@@ -28,8 +30,14 @@
     <main class="main">
       <div class="pokemon-wrapper"></div>
       <div class="pokemon-card">
-        <h5>#999</h5>
-        <h3>Pokemon Name</h3>
+        <h5 class="pokemon-id">#999</h5>
+        <div class="pokemon-img">
+          <img
+            src="https://raw.githubusercontent.com/pokeapi/sprites/master/sprites/pokemon/other/dream-world/1.svg"
+            alt=""
+          />
+        </div>
+        <h3 class="pokemon-name">Pokemon Name</h3>
       </div>
     </main>
   </body>
