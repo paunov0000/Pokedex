@@ -26,7 +26,7 @@ fetch(baseUrl)
 
       pPokemonName.textContent = capitalizeFirstLetter(currPokemon.name);
       const pokemonId = pokemonIdExtractor(currPokemon.url);
-      pPokemonId.textContent = pokemonId;
+      pPokemonId.textContent = `#${pokemonId}`;
 
       imgPokemon.src = `${imgUrl}${pokemonId}.svg`;
       imgPokemonContainer.appendChild(imgPokemon);
