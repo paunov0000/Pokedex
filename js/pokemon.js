@@ -24,7 +24,7 @@ fetch(baseUrl)
 
       const imgPokemon = document.createElement("img");
 
-      pPokemonName.textContent = currPokemon.name;
+      pPokemonName.textContent = capitalizeFirstLetter(currPokemon.name);
       const pokemonId = pokemonIdExtractor(currPokemon.url);
       pPokemonId.textContent = pokemonId;
 
@@ -43,4 +43,8 @@ fetch(baseUrl)
 function pokemonIdExtractor(pokemonUrl) {
   const id = pokemonUrl.split(`/`)[6];
   return id;
+}
+
+function capitalizeFirstLetter(string) {
+  return string.charAt(0).toUpperCase() + string.slice(1);
 }
