@@ -1,0 +1,17 @@
+div#pokemon-display {
+  display: flex;
+  align-items: center;
+  gap: 1em;
+}
+
+div#pokemon-display img {
+  width: 100%;
+}
+
+div#next-pokemon {
+  cursor: pointer;
+}
+
+div#pokemon-image {
+  margin: auto;
+}

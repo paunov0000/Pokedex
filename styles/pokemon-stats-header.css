@@ -7,6 +7,7 @@ header {
   display: flex;
   /* gap: 0em 2.5em; */
   align-items: center;
+  margin-bottom: 5em;
   /* align-content: center; */
 }
 
