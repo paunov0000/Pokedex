@@ -1,0 +1,28 @@
+body {
+  width: 55%;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  /* gap: 0em 2.5em; */
+  align-items: center;
+  /* align-content: center; */
+}
+
+div#pokemon-name {
+  margin: auto;
+}
+
+div#pokemon-name p {
+  font-size: 2em;
+  /* margin-right: 3em; */
+}
+
+div#pokemon-id {
+  margin-left: auto;
+}
+
+div#pokemon-id p {
+  font-size: 1.2em;
+}
