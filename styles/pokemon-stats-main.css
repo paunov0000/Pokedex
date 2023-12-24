@@ -1,3 +1,16 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+  /* margin : 1em; */ /* think its better w/o margin */
+}
+
+main div {
+  display: flex;
+  /* gap: 2em; */
+  align-items: center;
+  margin: auto;
+}
 div#pokemon-display {
   display: flex;
   align-items: center;
@@ -14,4 +27,28 @@ div#next-pokemon {
 
 div#pokemon-image {
   margin: auto;
+}
+
+div#pokemon-type {
+  gap: 2em;
+  /* width: 100%; */
+}
+
+div#pokemon-type p {
+  /* display: flex;
+  gap: 2em; */
+  margin: 0;
+  padding: 0.5em 0.8em;
+  font-size: 1em;
+  font-weight: bold;
+  text-transform: capitalize;
+  border-radius: 1em;
+  background-color: #666666;
+  color: #ffffff;
+}
+
+div#pokemon-about p {
+  font-size: 1.4em;
+  font-weight: bolder;
+  color: #b8b8b8;
 }
