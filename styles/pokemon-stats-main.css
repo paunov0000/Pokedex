@@ -12,15 +12,15 @@ main div {
   margin: auto;
 }
 div#pokemon-display {
-  display: flex;
-  align-items: center;
-  gap: 1em;
+  gap: 4em;
 }
 
 div#pokemon-display img {
-  width: 100%;
+  min-width: 100%;
+  /* min-width: 10vw; */
 }
 
+div#previous-pokemon,
 div#next-pokemon {
   cursor: pointer;
 }
