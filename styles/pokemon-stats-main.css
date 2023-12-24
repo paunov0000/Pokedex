@@ -2,12 +2,10 @@ main {
   display: flex;
   flex-direction: column;
   gap: 2em;
-  /* margin : 1em; */ /* think its better w/o margin */
 }
 
 main div {
   display: flex;
-  /* gap: 2em; */
   align-items: center;
   margin: auto;
 }
@@ -17,7 +15,10 @@ div#pokemon-display {
 
 div#pokemon-display img {
   min-width: 100%;
-  /* min-width: 10vw; */
+}
+
+div#ruler {
+  transform: rotate(90deg);
 }
 
 div#previous-pokemon,
@@ -31,12 +32,9 @@ div#pokemon-image {
 
 div#pokemon-type {
   gap: 2em;
-  /* width: 100%; */
 }
 
 div#pokemon-type p {
-  /* display: flex;
-  gap: 2em; */
   margin: 0;
   padding: 0.5em 0.8em;
   font-size: 1em;
@@ -59,10 +57,9 @@ div#pokemon-info {
   gap: 2em;
 }
 
-div#pokemon-dimenstions {
+div#pokemon-dimensions {
   display: flex;
-  flex-direction: column;
-  /* gap: 1em; */
+  align-items: flex-start;
 }
 
 .img-stat {
@@ -70,45 +67,46 @@ div#pokemon-dimenstions {
   gap: 0.5em;
 }
 
-/* div#pokemon-dimensions > div {
-  border-right: 2px solid #1d1d1d;
-  height: 100%;
-} */
-
-div#pokemon-dimensions p {
+div#pokemon-dimensions p:not(.measurement) {
   font-size: 1em;
   font-weight: 500;
   color: #1d1d1d;
 }
 
-div#pokemon-weight {
+div#pokemon-abilties,
+div.pokemon-stat {
   display: flex;
   flex-wrap: wrap;
-  gap: 1.8em;
+  gap: 1.2em;
 }
 
-div#pokemon-weight p:not(:last-child) {
+div#pokemon-abilties,
+div.pokemon-stat p:not(:last-child) {
   flex: 1;
   text-align: center;
-  /* width: 50%; */
 }
 
-div#pokemon-weight p:last-child {
+div#pokemon-abilties,
+div.pokemon-stat p:last-child {
   width: 100%;
-  /* color: #b8b8b8; */
 }
 
-div#pokemon-weight > p:last-child {
+.measurement {
+  width: 100%;
   text-align: center;
-  /* color: #b8b8b8;   */
-  font-size: 0.8em;
+  font-size: 0.7em;
 }
 
 div.img-container {
-  width: 3em;
+  width: 2.7em;
   height: auto;
 }
 
 div.img-container img {
   width: 100%;
+}
+
+.ability {
+  display: flex;
+  flex-direction: column;
 }
