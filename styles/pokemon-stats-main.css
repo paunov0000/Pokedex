@@ -52,3 +52,63 @@ div#pokemon-about p {
   font-weight: bolder;
   color: #b8b8b8;
 }
+
+div#pokemon-info {
+  display: flex;
+  flex-direction: row;
+  gap: 2em;
+}
+
+div#pokemon-dimenstions {
+  display: flex;
+  flex-direction: column;
+  /* gap: 1em; */
+}
+
+.img-stat {
+  display: flex;
+  gap: 0.5em;
+}
+
+/* div#pokemon-dimensions > div {
+  border-right: 2px solid #1d1d1d;
+  height: 100%;
+} */
+
+div#pokemon-dimensions p {
+  font-size: 1em;
+  font-weight: 500;
+  color: #1d1d1d;
+}
+
+div#pokemon-weight {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8em;
+}
+
+div#pokemon-weight p:not(:last-child) {
+  flex: 1;
+  text-align: center;
+  /* width: 50%; */
+}
+
+div#pokemon-weight p:last-child {
+  width: 100%;
+  /* color: #b8b8b8; */
+}
+
+div#pokemon-weight > p:last-child {
+  text-align: center;
+  /* color: #b8b8b8;   */
+  font-size: 0.8em;
+}
+
+div.img-container {
+  width: 3em;
+  height: auto;
+}
+
+div.img-container img {
+  width: 100%;
+}
