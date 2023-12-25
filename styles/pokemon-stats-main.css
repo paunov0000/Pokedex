@@ -57,6 +57,8 @@ div#stats-title p {
   font-weight: bolder;
   color: #b8b8b8;
   text-transform: capitalize;
+  word-spacing: 0.2em;
+  letter-spacing: 0.02em;
 }
 
 div#pokemon-info {
@@ -144,11 +146,18 @@ div#pokemon-description p {
 
 div#pokemon-stats {
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   gap: 1.2em;
 }
 
 div#stats-title {
   justify-content: center;
   width: 100%;
+}
+
+div.stat-cell {
+  /* display: flex; */
+  /* flex-direction: column; */
+  gap: 3em;
+  justify-content: flex-end;
 }
