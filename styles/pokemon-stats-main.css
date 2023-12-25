@@ -141,13 +141,12 @@ div#pokemon-description p {
   font-weight: 500;
   color: #1d1d1d;
   line-height: 1.7;
-  /* text-align: center; */
 }
 
 div#pokemon-stats {
   flex-direction: column;
   align-items: flex-start;
-  gap: 1.2em;
+  gap: 1em;
   position: relative;
 }
 
@@ -155,7 +154,7 @@ div#pokemon-stats::before {
   content: "";
   position: absolute;
   left: calc(3em + 1em);
-  top: calc(1em + 1.5em);
+  top: calc(1em + 1em);
   bottom: 0;
   width: 2px;
   background-color: #b8b8b8;
@@ -167,26 +166,22 @@ div#stats-title {
 }
 
 div.stat-cell {
-  /* width: 100%; */
   display: flex;
-  gap: 1.5em;
-  /* justify-content: space-between; */
+  gap: 2.5em;
 }
 
 div.stat-name {
-  /* border-right: 3px solid #b8b8b8; */
-  padding-right: 1em;
 }
 
 div.stat-name p {
   width: 3em;
+  color: #b8b8b8;
   text-align: right;
 }
 
 div.stat-value {
-  /* padding-left: 1em;  */
+  font-weight: 500;
 }
 
 div.stat-name p {
-  /* text-align: right; */
 }
