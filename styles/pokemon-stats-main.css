@@ -54,12 +54,19 @@ div#pokemon-about p {
 div#pokemon-info {
   display: flex;
   flex-direction: row;
+  /* justify-content: flex-end; */
+  /* align-items: flex-end; */
   gap: 2em;
 }
 
 div#pokemon-dimensions {
   display: flex;
-  align-items: flex-start;
+  align-items: flex-end;
+  /* margin: 0; */
+}
+
+div#pokemon-dimensions div {
+  margin: 0;
 }
 
 .img-stat {
