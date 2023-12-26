@@ -166,8 +166,10 @@ div#stats-title {
 }
 
 div.stat-cell {
-  display: flex;
+  /* display: flex; */
+  /* display: block; */
   gap: 2.5em;
+  width: 100%;
 }
 
 div.stat-name {
@@ -180,19 +182,21 @@ div.stat-name p {
 }
 
 div.stat-value {
+  /* display: block; */
   font-weight: 500;
 }
 
 div.stat-name p {
 }
 
-.container {
-  /* width: 100%; */
-  /* display: flex; */
-  /* align-items: flex-start; */
-}
+/* .container { */
+/* position: relative; */
+/* width: 100%; */
+/* display: flex; */
+/* align-items: flex-start; */
+/* } */
 
-.progress2 {
+/* .progress2 {
   padding: 6px;
   border-radius: 30px;
   background: rgba(0, 0, 0, 0.25);
@@ -202,7 +206,7 @@ div.stat-name p {
 
 .progress-bar2 {
   width: 100%;
-  height: 18px;
+  height: 1em;
   border-radius: 30px;
   background-image: linear-gradient(
     to bottom,
@@ -214,4 +218,34 @@ div.stat-name p {
 .progress-moved .progress-bar2 {
   width: 85%;
   background-color: #47ef8d;
+} */
+
+.container {
+  /* flex-shrink: 0; Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
+}
+
+/* .container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 50%; /* Change this value to adjust the progress */
+/*} */
+
+.progress-bar {
+  /* display: block; */
+  height: 100%;
+  width: 50%; /* Adjust this to represent the current progress */
+  background-color: #4caf50;
+}
+
+.stat-bar {
+  width: 100%;
+  gap: 2em;
 }

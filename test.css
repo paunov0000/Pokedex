@@ -1,36 +1,16 @@
-.progress2 {
-  padding: 6px;
-  border-radius: 30px;
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
-    0 1px rgba(255, 255, 255, 0.08);
+.container {
+  position: relative;
+  width: 100%;
+  height: 20px;
+  background-color: #f0f0f0;
 }
 
-.progress-bar2 {
-  height: 18px;
-  border-radius: 30px;
-  background-image: linear-gradient(
-    to bottom,
-    rgba(255, 255, 255, 0.3),
-    rgba(255, 255, 255, 0.05)
-  );
-  /* transition: 0.4s linear; */
-  /* transition-property: width, background-color; */
+.container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background-color: #4caf50;
+  width: 50%; /* Change this value to adjust the progress */
 }
-
-.progress-moved .progress-bar2 {
-  width: 85%;
-  background-color: #47ef8d;
-  /* animation: progressAnimation 6s; */
-}
-
-/* @keyframes progressAnimation {
-  0% {
-    width: 0%;
-    background-color: #f9bcca;
-  }
-  100% {
-    width: 85%;
-    background-color: #ef476f;
-  }
-} */
