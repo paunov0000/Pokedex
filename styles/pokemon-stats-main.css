@@ -200,9 +200,12 @@ div.stat-name p {
   width: 100%;
   padding: 0em;
   border-radius: 30px;
-  background: rgba(0, 0, 0, 0.25);
-  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
-    0 1px rgba(255, 255, 255, 0.08);
+  /* background: rgba(0, 0, 0, 0.25); */
+  /* background: #efefef; */
+  /* background: rgba(230, 230, 230, 1); */
+  background: rgba(224, 224, 224, 1);
+  /* box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
+    0 1px rgba(255, 255, 255, 0.08); */
 }
 
 .progress-bar2 {
@@ -218,7 +221,7 @@ div.stat-name p {
 }
 
 .progress-moved .progress-bar2 {
-  width: 100%; /*! THIS HAPPENS WHENEVR THE ANIMATION IS OVER, SHOULD BE AT THE SAME % AS THE ANIMATION % */
+  width: 80%; /*! THIS HAPPENS WHENEVR THE ANIMATION IS OVER, SHOULD BE AT THE SAME % AS THE ANIMATION % */
   background-color: #ef476f;
   animation: progressAnimation 6s;
 }
@@ -229,7 +232,7 @@ div.stat-name p {
     background-color: #f9bcca;
   }
   100% {
-    width: 100%; /*! THIS IS THE ANIMATION PERCENTAGE 100% */
+    width: 80%; /*! THIS IS THE ANIMATION PERCENTAGE 100% */
     background-color: #ef476f;
   }
 }
