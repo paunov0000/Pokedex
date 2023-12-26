@@ -189,15 +189,16 @@ div.stat-value {
 div.stat-name p {
 }
 
-/* .container { */
-/* position: relative; */
-/* width: 100%; */
-/* display: flex; */
-/* align-items: flex-start; */
-/* } */
+.container {
+  position: relative;
+  width: 100%;
+  /* height: 10em;   */
+  /* text-align: center; */
+}
 
-/* .progress2 {
-  padding: 6px;
+.progress2 {
+  width: 100%;
+  padding: 0em;
   border-radius: 30px;
   background: rgba(0, 0, 0, 0.25);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.25),
@@ -205,44 +206,32 @@ div.stat-name p {
 }
 
 .progress-bar2 {
-  width: 100%;
-  height: 1em;
+  height: 0.4em;
   border-radius: 30px;
   background-image: linear-gradient(
     to bottom,
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.05)
   );
+  transition: 0.4s linear;
+  transition-property: width, background-color;
 }
 
 .progress-moved .progress-bar2 {
-  width: 85%;
-  background-color: #47ef8d;
-} */
-
-.container {
-  /* flex-shrink: 0; Prevent Chrome, Opera, and Safari from letting these items shrink to smaller than their content's default minimum size. */
-  position: relative;
-  width: 100%;
-  height: 20px;
-  background-color: #f0f0f0;
+  width: 100%; /*! THIS HAPPENS WHENEVR THE ANIMATION IS OVER, SHOULD BE AT THE SAME % AS THE ANIMATION % */
+  background-color: #ef476f;
+  animation: progressAnimation 6s;
 }
 
-/* .container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  height: 100%;
-  background-color: #4caf50;
-  width: 50%; /* Change this value to adjust the progress */
-/*} */
-
-.progress-bar {
-  /* display: block; */
-  height: 100%;
-  width: 50%; /* Adjust this to represent the current progress */
-  background-color: #4caf50;
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+    background-color: #f9bcca;
+  }
+  100% {
+    width: 100%; /*! THIS IS THE ANIMATION PERCENTAGE 100% */
+    background-color: #ef476f;
+  }
 }
 
 .stat-bar {
