@@ -30,6 +30,12 @@ div#next-pokemon {
 }
 
 div#pokemon-image {
+  /* width: 100%; */
+}
+
+div#pokemon-image img {
+  width: 10em;
+  height: 10em;
 }
 
 div#pokemon-type {
@@ -185,6 +191,7 @@ div.stat-name p {
 div.stat-value {
   /* display: block; */
   font-weight: 500;
+  width: 1em;
 }
 
 div.stat-name p {
@@ -224,21 +231,26 @@ div.stat-name p {
 .progress-moved .progress-bar2 {
   width: 80%; /*! THIS HAPPENS WHENEVR THE ANIMATION IS OVER, SHOULD BE AT THE SAME % AS THE ANIMATION % */
   background-color: #ef476f;
-  animation: progressAnimation 6s;
+  animation: progressAnimation 4s;
 }
 
-@keyframes progressAnimation {
+/* @keyframes progressAnimation {
   0% {
     width: 0%;
     background-color: #f9bcca;
   }
   100% {
-    width: 80%; /*! THIS IS THE ANIMATION PERCENTAGE 100% */
+    width: 80%; 
     background-color: #ef476f;
   }
-}
+} */
 
 .stat-bar {
   width: 100%;
+  justify-content: center;
+  /* align-items: center; */
   gap: 2em;
+  /* gap: 2em; */
+  /* justify-content: space-between; */
+  /* gap: 2em; */
 }

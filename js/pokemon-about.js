@@ -49,7 +49,6 @@ function renderData(data) {
             <div class="img-container">
               <img src="./assetsv2/pokemonWeight.svg" alt="" />
             </div>
-            <p>9.9kg</p>
           </div>
           <p class="measurement">Weight</p>
         </div>
@@ -58,26 +57,17 @@ function renderData(data) {
             <div id="ruler" class="img-container">
               <img src="./assetsv2/pokemonHeight.svg" alt="" />
             </div>
-            <p>9.9m</p>
           </div>
           <p class="measurement">Height</p>
         </div>
         <div id="pokemon-abilties">
           <div class="ability">
-            <p>Ability 1</p>
-            <p>Ability 2</p>
           </div>
           <p class="measurement">Moves</p>
         </div>
       </div>
     </div>
     <div id="pokemon-description">
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sed
-        nostrum minima in quis quisquam incidunt labore enim ut laboriosam
-        tenetur ipsa explicabo, excepturi cum esse qui totam minus nam
-        laudantium.
-      </p>
     </div>
     <div id="pokemon-stats">
       <div id="stats-title">
@@ -88,9 +78,7 @@ function renderData(data) {
           <p>HP</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -103,9 +91,7 @@ function renderData(data) {
           <p>ATK</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -118,9 +104,7 @@ function renderData(data) {
           <p>DEF</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -133,9 +117,7 @@ function renderData(data) {
           <p>SATK</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -148,9 +130,7 @@ function renderData(data) {
           <p>SDEF</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -163,9 +143,7 @@ function renderData(data) {
           <p>SPD</p>
         </div>
         <div class="stat-bar">
-          <div class="stat-value">
-            <p>999</p>
-          </div>
+          <div class="stat-value"></div>
           <div class="container">
             <div class="progress2 progress-moved">
               <div class="progress-bar2"></div>
@@ -184,16 +162,11 @@ function renderData(data) {
   const pokemonNext = document.querySelector("#next-pokemon");
   const pokemonImg = document.querySelector("#pokemon-image img");
   const pokemonTypeContainer = document.querySelector("#pokemon-type");
-  const pokemonWeight = document.querySelector("#weight p");
-  const pokemonHeight = document.querySelector("#height p");
-  const pokemonAbilities = document.querySelector("#pokemon-abilities p");
-  const pokemonDescription = document.querySelector("#pokemon-description p");
-  const pokemonHp = document.querySelector("#hp-stat p:nth-child(2)");
-  const pokemonAtk = document.querySelector("#atk-stat p:nth-child(2)");
-  const pokemonDef = document.querySelector("#def-stat p:nth-child(2)");
-  const pokemonSatk = document.querySelector("#satk-stat p:nth-child(2)");
-  const pokemonSdef = document.querySelector("#sdef-stat p:nth-child(2)");
-  const pokemonSpd = document.querySelector("#spd-stat p:nth-child(2)");
+  const pokemonWeight = document.querySelector("#weight");
+  const pokemonHeight = document.querySelector("#height");
+  const pokemonAbilities = document.querySelector(".ability");
+  const pokemonDescription = document.querySelector("#pokemon-description");
+  const pokemonHpElements = document.querySelectorAll(".stat-value");
 
   //set the values of the elements
   const pPokemonName = document.createElement("p");
@@ -219,32 +192,62 @@ function renderData(data) {
     pokemonTypeContainer.appendChild(currTypeElement);
   }
 
-  pokemonWeight.textContent = `Weight: ${data.weight} kg`;
-  pokemonHeight.textContent = `Height: ${data.height} m`;
+  const pPokemonWeight = document.createElement("p");
+  pPokemonWeight.textContent = `${data.weight} kg`;
+  pokemonWeight.appendChild(pPokemonWeight);
+
+  const pPokemonHeight = document.createElement("p");
+  pPokemonHeight.textContent = `${data.height} m`;
+  pokemonHeight.appendChild(pPokemonHeight);
+  // pokemonHeight.textContent = `${data.height} m`;
 
   //loop through the types array and add the types to the pokemonTypes element
-  for (const currType of data.types) {
+  for (let index = 0; index < data.abilities.length; index++) {
+    const currTypeName = data.abilities[index].ability.name;
+    console.log(currTypeName);
+
     const currTypeElement = document.createElement("p");
-    currTypeElement.classList.add("pokemon-type");
-    currTypeElement.textContent = currType.type.name;
-    pokemonTypes.appendChild(currTypeElement);
+    currTypeElement.textContent = capitalizeFirstLetter(currTypeName);
+    pokemonAbilities.appendChild(currTypeElement);
   }
 
-  //loop through the abilities array and add the abilities to the pokemonAbilities element
-  for (const currAbility of data.abilities) {
-    const currAbilityElement = document.createElement("p");
-    currAbilityElement.classList.add("pokemon-ability");
-    currAbilityElement.textContent = currAbility.ability.name;
-    pokemonAbilities.appendChild(currAbilityElement);
-  }
+  const pPokemonDescription = document.createElement("p");
+  pPokemonDescription.textContent = data.species.name;
+  pokemonDescription.appendChild(pPokemonDescription);
 
-  //loop through the moves array and add the moves to the pokemonMoves element
-  for (const currMove of data.moves) {
-    const currMoveElement = document.createElement("p");
-    currMoveElement.classList.add("pokemon-move");
-    currMoveElement.textContent = currMove.move.name;
-    pokemon;
-    // Your code to render the data goes here
+  debugger;
+  for (let index = 0; index < pokemonHpElements.length; index++) {
+    const pPokemonStat = document.createElement("p");
+    pPokemonStat.textContent = data.stats[index].base_stat;
+    pokemonHpElements[index].appendChild(pPokemonStat);
+
+    // console.log(pokemonHpElements[index]);
+
+    const pokemonBarContainerElement =
+      pokemonHpElements[index].nextElementSibling.querySelector(
+        `.progress-bar2`
+      );
+
+    console.log(pokemonBarContainerElement);
+
+    pokemonBarContainerElement.style.width = `${
+      data.stats[index].base_stat / 2.55
+    }%`;
+
+    const style = document.createElement("style");
+
+    style.innerHTML = `
+    @keyframes progressAnimation${index} {
+      0% { width: 0%; }
+      100% { width: ${
+        data.stats[index].base_stat / 2.55
+      }%; } /* Change this to the width you want */
+    }
+    `;
+
+    document.head.appendChild(style);
+
+    pokemonBarContainerElement.style.animationName = `progressAnimation${index}`;
   }
 }
 
