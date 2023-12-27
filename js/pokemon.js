@@ -32,9 +32,14 @@ fetch(baseUrl)
       imgPokemonContainer.appendChild(imgPokemon);
       pokemonNameContainer.appendChild(pPokemonName);
 
+      cardPokemon.id = pokemonId;
+
       cardPokemon.appendChild(pPokemonId);
       cardPokemon.appendChild(imgPokemonContainer);
       cardPokemon.appendChild(pokemonNameContainer);
+      cardPokemon.addEventListener("click", () => {
+        window.location.href = `./details.html?id=${pokemonId}`;
+      });
 
       pokemonWrapperDiv.appendChild(cardPokemon);
     }
