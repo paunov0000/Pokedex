@@ -1,4 +1,5 @@
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
+const MAX_POKEMON = 151;
 const body = document.querySelector("body");
 body.innerHTML = ``;
 
@@ -177,10 +178,18 @@ function renderData(data) {
   pPokemonId.textContent = `#${padWithLeadingZeros(data.id, 3)}`;
   pokemonId.appendChild(pPokemonId);
   pokemonPrevious.addEventListener("click", () => {
-    window.location.href = `details.html?id=${data.id - 1}`;
+    if (data.id - 1 === 0) {
+      window.location.href = `details.html?id=${MAX_POKEMON}`;
+    } else {
+      window.location.href = `details.html?id=${data.id - 1}`;
+    }
   });
   pokemonNext.addEventListener("click", () => {
-    window.location.href = `details.html?id=${data.id + 1}`;
+    if (data.id + 1 > MAX_POKEMON) {
+      window.location.href = `details.html?id=${data.id - MAX_POKEMON + 1}`;
+    } else {
+      window.location.href = `details.html?id=${data.id + 1}`;
+    }
   });
   pokemonImg.src = data.sprites.other.dream_world.front_default;
 
