@@ -11,7 +11,7 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 50vw;
+  width: 30vw;
 }
 
 /* @media screen and (min-width: 768px) {
@@ -22,10 +22,11 @@ body {
 
 header {
   display: flex;
-  justify-content: center;
+  width: 100%;
+  justify-content: space-between;
   flex-direction: row;
   align-items: center;
-  gap: 0em 4em;
+  /* gap: 0em 4em; */
   margin-bottom: 4em;
 }
 
