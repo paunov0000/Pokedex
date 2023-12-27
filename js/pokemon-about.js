@@ -157,6 +157,7 @@ function renderData(data) {
 </div>`;
 
   //render the data into the details.html page
+  const returnArrow = document.querySelector(".arrow-back");
   const pokemonName = document.querySelector("#pokemon-name");
   const pokemonId = document.querySelector("#pokemon-id");
   const pokemonPrevious = document.querySelector("#previous-pokemon");
@@ -170,6 +171,11 @@ function renderData(data) {
   const pokemonHpElements = document.querySelectorAll(".stat-value");
 
   //set the values of the elements
+
+  returnArrow.addEventListener("click", () => {
+    window.location.href = `index.html`;
+  });
+
   const pPokemonName = document.createElement("p");
   pPokemonName.textContent = capitalizeFirstLetter(data.name);
   pokemonName.appendChild(pPokemonName);
