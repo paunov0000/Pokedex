@@ -1,6 +1,27 @@
 const BASE_URL = "https://pokeapi.co/api/v2/pokemon";
 const MAX_POKEMON = 151;
 const body = document.querySelector("body");
+const pokemonTypes = {
+  normal: "#AAA67F",
+  fire: "#F57D31",
+  water: "#6493EB",
+  electric: "#F9CF30",
+  grass: "#74CB48",
+  ice: "#9AD6DF",
+  fighting: "#C12239",
+  poison: "#A43E9E",
+  ground: "#DEC16B",
+  flying: "#A891EC",
+  psychic: "#FB5584",
+  bug: "#A7B723",
+  rock: "#B69E31",
+  ghost: "#70559B",
+  dragon: "#7037FF",
+  dark: "#75574C",
+  steel: "#B7B9D0",
+  fairy: "#E69EAC",
+};
+
 body.innerHTML = ``;
 
 // Function to fetch data based on the provided id
@@ -67,8 +88,6 @@ function renderData(data) {
           <p class="measurement">Moves</p>
         </div>
       </div>
-    </div>
-    <div id="pokemon-description">
     </div>
     <div id="pokemon-stats">
       <div id="stats-title">
@@ -204,6 +223,7 @@ function renderData(data) {
 
     const currTypeElement = document.createElement("p");
     currTypeElement.textContent = capitalizeFirstLetter(currTypeName);
+    currTypeElement.style.backgroundColor = pokemonTypes[currTypeName];
     pokemonTypeContainer.appendChild(currTypeElement);
   }
 
@@ -226,9 +246,9 @@ function renderData(data) {
     pokemonAbilities.appendChild(currTypeElement);
   }
 
-  const pPokemonDescription = document.createElement("p");
-  pPokemonDescription.textContent = data.species.name;
-  pokemonDescription.appendChild(pPokemonDescription);
+  // const pPokemonDescription = document.createElement("p");
+  // pPokemonDescription.textContent = data.species.name;
+  // pokemonDescription.appendChild(pPokemonDescription);
 
   debugger;
   for (let index = 0; index < pokemonHpElements.length; index++) {

@@ -56,6 +56,9 @@ div#pokemon-type p {
 
 div#pokemon-about {
   justify-content: center;
+  /* position: absolute;
+  top: 17em;
+  left: 35.2em; */
 }
 
 div#pokemon-about,
@@ -79,7 +82,12 @@ div#pokemon-dimensions {
   display: flex;
   align-items: flex-end;
   margin: 0;
+  /* flex: 1; */
   /* gap: 1.2em; */
+}
+
+div#pokemon-dimensions > * {
+  flex: 1;
 }
 
 div#pokemon-dimensions div {
@@ -136,6 +144,7 @@ div.img-container img {
 .ability {
   display: flex;
   flex-direction: column;
+  /* font-size: 0.7em; */
 }
 
 div#pokemon-description {
@@ -162,7 +171,8 @@ div#pokemon-stats::before {
   position: absolute;
   left: calc(3em + 1em);
   top: calc(1em + 1em);
-  bottom: 0;
+  bottom: calc(1em - 1.4em);
+  /* bottom: 0; */
   width: 2px;
   background-color: #b8b8b8;
 }
