@@ -228,11 +228,11 @@ function renderData(data) {
   }
 
   const pPokemonWeight = document.createElement("p");
-  pPokemonWeight.textContent = `${data.weight} kg`;
+  pPokemonWeight.textContent = `${(data.weight/10).toFixed(1)} kg`;
   pokemonWeight.appendChild(pPokemonWeight);
 
   const pPokemonHeight = document.createElement("p");
-  pPokemonHeight.textContent = `${data.height} m`;
+  pPokemonHeight.textContent = `${(data.height*10).toFixed(1)} cm`;
   pokemonHeight.appendChild(pPokemonHeight);
   // pokemonHeight.textContent = `${data.height} m`;
 
