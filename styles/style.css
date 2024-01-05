@@ -31,10 +31,10 @@ div.searchBarWrapper {
 }
 
 img#searchIcon {
-  width: 1.4em;
+  max-width: 2em;
   position: absolute;
-  left: 7.8em;
-  top: 8em;
+  left: 8em;
+  top: 7.65em;
 }
 
 div.sortDropDownMenuWrapper {
@@ -42,15 +42,15 @@ div.sortDropDownMenuWrapper {
   justify-content: center;
   align-items: center;
   position: relative;
-  top: 0.34em;
+  top: 0.47em;
   background-color: #fff;
   border-radius: 50%;
-  width: 3em;
-  height: 3em;
+  min-width: 3em;
+  min-height: 3em;
 }
 
 img#sortIcon {
-  width: 1.4em;
+  max-width: 2em;
 }
 
 img.filter-red {
@@ -59,10 +59,17 @@ img.filter-red {
 }
 
 input#searchBar {
-  width: 20vw;
-  height: 4em;
-  padding: 0.5em 3.4em;
+  min-width: 30vw;
+  /* min-height: 4em; */
+  padding: 0.8em 3.4em;
   border-radius: 3em;
+  border-style: solid;
+  border: none;
+  font-size: 1.1em;
+}
+
+input#searchBar:focus {
+  outline: none;
 }
 
 h1#title {

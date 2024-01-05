@@ -4,6 +4,13 @@ body {
   padding: 2em 7em;
 }
 
+main {
+  padding: 2em 1.5em;
+  background-color: #efefef;
+  border-radius: 2em;
+  /* max-width: 70em; */
+}
+
 .pokemon-wrapper {
   display: flex;
   gap: 3em 4em;
@@ -19,12 +26,12 @@ body {
   border: 1px solid #ccc;
   border-radius: 1em;
   background-color: #fff;
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to top,
     #b8b8b8 0%,
     #b8b8b8 50%,
     #00ff0000 53%
-  );
+  ); */
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.2);
 }
 
@@ -38,8 +45,8 @@ body {
 .pokemon-card .pokemon-img {
   display: block;
   margin: 0 auto;
-  width: 6em;
-  height: 6em;
+  width: 8em;
+  height: 8em;
   border-radius: 50%;
   margin-top: 2em;
 }
