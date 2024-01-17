@@ -9,6 +9,7 @@ main {
   background-color: #efefef;
   border-radius: 2em;
   /* max-width: 70em; */
+  /* min-width: 100%; */
 }
 
 .pokemon-wrapper {
@@ -19,7 +20,7 @@ main {
 }
 
 .pokemon-card {
-  flex-basis: 30.26%;
+  flex-basis: 29%;
   flex-grow: 1;
   flex-shrink: 1;
   position: relative;

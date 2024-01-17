@@ -11,44 +11,45 @@
     <link rel="stylesheet" href="styles/style.css" />
   </head>
   <body>
-    <header class="header">
-      <img
-        id="pokeball"
-        class="filter-white"
-        src="./assetsv2/pokeball.svg"
-        alt="pokeball"
-      />
-      <h1 id="title">Pokédex</h1>
-    </header>
-    <nav class="navbar">
-      <div class="searchBarWrapper">
-        <label for="searchBar">
-          <img
-            class="filter-red"
-            id="searchIcon"
-            src="./assetsv2/searchIcon.svg"
-            alt="search icon"
-          />
-        </label>
-        <input
-          type="search"
-          placeholder="Search"
-          name="searchBar"
-          id="searchBar"
-        />
-      </div>
-      <div class="sortDropDownMenuWrapper">
+    <div class="container">
+      <header class="header">
         <img
-          id="sortIcon"
-          class="filter-red"
-          src="./assetsv2/sortIcon.svg"
-          alt="sort icon"
+          id="pokeball"
+          class="filter-white"
+          src="./assetsv2/pokeball.svg"
+          alt="pokeball"
         />
-      </div>
-    </nav>
-    <main class="main">
-      <div class="pokemon-wrapper"></div>
-      <!-- <div class="pokemon-card">
+        <h1 id="title">Pokédex</h1>
+      </header>
+      <nav class="navbar">
+        <div class="searchBarWrapper">
+          <label for="searchBar">
+            <img
+              class="filter-red"
+              id="searchIcon"
+              src="./assetsv2/searchIcon.svg"
+              alt="search icon"
+            />
+          </label>
+          <input
+            type="search"
+            placeholder="Search"
+            name="searchBar"
+            id="searchBar"
+          />
+        </div>
+        <div class="sortDropDownMenuWrapper">
+          <img
+            id="sortIcon"
+            class="filter-red"
+            src="./assetsv2/sortIcon.svg"
+            alt="sort icon"
+          />
+        </div>
+      </nav>
+      <main class="main">
+        <div class="pokemon-wrapper"></div>
+        <!-- <div class="pokemon-card">
         <h5 class="pokemon-id">#999</h5>
         <div class="pokemon-img">
           <img
@@ -58,7 +59,8 @@
         </div>
         <h3 class="pokemon-name">Pokemon Name</h3>
       </div> -->
-    </main>
+      </main>
+    </div>
   </body>
   <script src="./js/pokemon.js"></script>
 </html>

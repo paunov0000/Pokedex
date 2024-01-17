@@ -7,6 +7,15 @@ body::-webkit-scrollbar {
   display: none;
 }
 
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  /* padding: 2em 1.5em; */
+  /* background-color: #efefef; */
+  /* border-radius: 2em; */
+  /* max-width: 70em; */
+}
+
 header.header {
   display: flex;
 }
@@ -28,6 +37,7 @@ nav.navbar {
 div.searchBarWrapper {
   margin-top: 2em;
   margin-bottom: 1em;
+  min-width: 50%;
 }
 
 img#searchIcon {
@@ -59,7 +69,9 @@ img.filter-red {
 }
 
 input#searchBar {
-  min-width: 30vw;
+  display: block;
+  width: 100%;
+  /* min-width: 30vw; */
   /* min-height: 4em; */
   padding: 0.8em 3.4em;
   border-radius: 3em;
