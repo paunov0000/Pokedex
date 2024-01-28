@@ -269,6 +269,10 @@ function renderData(data) {
       data.stats[index].base_stat / 2.55
     }%`;
 
+    debugger;
+    // console.log(pokemonTypeContainer.children[0].textContent);
+    pokemonBarContainerElement.style.backgroundColor = pokemonTypes[pokemonTypeContainer.children[0].textContent.toLowerCase()];
+
     const style = document.createElement("style");
 
     style.innerHTML = `
