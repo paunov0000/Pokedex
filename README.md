@@ -64,7 +64,4 @@ This project is a Pokedex application inspired by the popular Pokemon series. It
     |- pokemonWeight.svg
     |- searchIcon.svg
     |- sortIcon.svg
-    
-  |- images/  # Directory containing Pokemon images (if applicable)
-    |- ...  # Individual Pokemon image files
 ```
